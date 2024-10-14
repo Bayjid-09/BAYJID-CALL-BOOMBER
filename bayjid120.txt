@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Call By BAYJID </title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url(https://i.imgur.com/T0mwx15.jpeg);
+            background-size: cover;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 350px;
+            height: 400px;
+            padding: 20px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            color: darkslategrey;
+            box-shadow: 0 0 10px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .inputBx input {
+            background: transparent;
+            color: darkslategrey;
+            border: 1px solid dimgrey;
+            padding: 6px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 280px;
+            height: 60px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .inputBx input::placeholder {
+            color: darkslategrey;
+        }
+
+        h1 {
+            font-size: 35px;
+            font-weight: 800;
+            text-align: center;
+            margin: 20px 0;
+            letter-spacing: 0.1rem;
+        }
+
+        input[type="submit"] {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 280px;
+            height: 60px;
+            text-align: center;
+            margin-top: 10px;
+            width: 280px;
+            height: 60px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .container button {
+            width: 200px;
+            height: 35px;
+            border-radius: 5px;
+            border: none;
+            font-weight: 500;
+            font-size: 16px;
+            background: darkslategrey;
+            color: white;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        a {
+            color: white;
+            margin: 7px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Make a Call</h1>
+        <form action="sms.php" method="get">
+            <div class="inputBx">
+                <input type="tel" name="mobileNo" placeholder="Enter mobile number" required>
+                <input type="text" name="countryDialingCode" value="880" readonly>
+            </div>
+            <input type="submit" value="Call">
+        </form>
+    </div>
+
+</body>
+</html>
